@@ -1,0 +1,13 @@
+{
+  "name": "Blackboard",
+  "description": "Paint the board",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Nicholas Camp Barcellos",
+    "url": "http://nicholascamp.com.br"
+  },
+  "default_locale": "en"
+}
