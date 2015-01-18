@@ -26,12 +26,12 @@ var app = function (conf) {
 
 app.prototype = {
 	// The ongoingTouchIndexById() function scans through the ongoingTouches array to find the touch matching the given identifier, then returns that touch's index into the array.
-	ongoingTouchIndexById: function (idToFind, instance) {
+	ongoingTouchIndexById: function (idToFind) {
 		var i = 0;
-		var len = instance.ongoingTouches.length;
+		var len = this.ongoingTouches.length;
 
 		for(; i < len; i++) {
-			var id = instance.ongoingTouches[i].identifier;
+			var id = this.ongoingTouches[i].identifier;
 
 			if (id == idToFind) {
 				return i;
@@ -112,7 +112,7 @@ app.prototype = {
 		var len = touches.length;
 
 		for(; i < len; i++) {
-			var idx = this.ongoingTouchIndexById(touches[i].identifier, this);
+			var idx = this.ongoingTouchIndexById(touches[i].identifier);
 
 			// There's a touch?
 			if(idx >= 0) {
@@ -140,7 +140,7 @@ app.prototype = {
 		var len = touches.length;
 
 		for(; i < len; i++) {
-			var idx = this.ongoingTouchIndexById(touches[i].identifier, this);
+			var idx = this.ongoingTouchIndexById(touches[i].identifier);
 
 			// There's a touch?
 			if(idx >= 0) {
