@@ -3,14 +3,17 @@ var app = function (conf) {
 	var instance = Object.create(app.prototype);
 
 	instance.board = conf.elm;
+		instance.board.width = window.innerWidth;
+		instance.board.height = window.innerHeight;
+		instance.board.name = conf.board.name || 'Black';
+		instance.board.color = conf.board.color || '#000';
+		instance.board.style.backgroundColor = instance.board.color;
+
+
 	instance.ctx = instance.board.getContext('2d');
 	instance.ongoingTouches = []; // touches in-progress
-	instance.lineColor = conf.lineColor || '#fff';
 	instance.lineThickness = conf.lineThickness || 4;
-	instance.backgroundColor = conf.backgroundColor || '#000';
-
-	instance.board.width = window.innerWidth;
-	instance.board.height = window.innerHeight;
+	instance.colorNameInLogo = document.getElementById(conf.colorBoard || 'color-board');
 
 	instance.board.addEventListener('touchstart', instance.handleTStart.bind(instance), false);
 	// instance.board.addEventListener('touchcancel', instance.handleTCancel, false);
@@ -20,7 +23,9 @@ var app = function (conf) {
 
 	instance.colors();
 	instance.manageLineThickness();
+	instance.boardNameColor();
 
+	instance.lineColor = conf.lineColor || '#fff';
 	return instance;
 };
 
@@ -42,8 +47,8 @@ app.prototype = {
 
 	// Initialize each color according to what is defined in its data-color attribute, and add touch event listener to change the line color and the color name in logo.
 	colors: function () {
-		var colorNameInLogo = document.getElementById('color-board');
 		var colors = document.getElementById('colors');
+		var color;
 		var li = colors.getElementsByTagName('li');
 		var $this = this;
 
@@ -51,21 +56,25 @@ app.prototype = {
 		var len = li.length;
 
 		for(; i < len; i++) {
-			var color = li[i].getAttribute('data-color');
+			color = li[i].getAttribute('data-color');
 
 			li[i].style.backgroundColor = color;
 		}
 
 		colors.addEventListener('click', function (evt) {
 			if (evt.target.tagName === 'LI') {
-				var color = evt.target.getAttribute('data-color');
-				var name = evt.target.getAttribute('data-name');
+				$this.board.name = evt.target.getAttribute('data-name');
+				$this.board.color = evt.target.getAttribute('data-color');
 
-				$this.lineColor = color;
-				colorNameInLogo.innerHTML = name;
-				colorNameInLogo.style.color = color;
+				$this.boardNameColor();
 			}
 		});
+	},
+
+	boardNameColor: function () {
+		this.colorNameInLogo.innerHTML = this.board.name;
+		this.colorNameInLogo.style.color = this.board.color;
+		this.lineColor = this.board.color;
 	},
 
 	// Increase and decrease line thickness
@@ -158,8 +167,8 @@ app.prototype = {
 
 var blackboard = {
 	elm: document.getElementById('blackboard'),
+	board: {name: 'Black', color: '#000'},
 	lineColor: '#fff', // default values
-	backgroundColor: '#000',
 	lineThickness: 4
 };
 

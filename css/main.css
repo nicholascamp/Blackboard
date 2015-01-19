@@ -624,7 +624,7 @@ textarea {
 
 .blackboard { background: #000; }
 
-h1 { background-color: #000; color: #000; font: 30px/1 'HVD Comic', sans-serif; left: 3%; margin: 0; position: absolute; text-shadow: 0 0 1px #ddd; top: 2%; }
+h1 { color: #000; font: 30px/1 'HVD Comic', sans-serif; left: 3%; margin: 0; position: absolute; text-shadow: 0 0 1px #ddd; top: 2%; }
 
 .colors { bottom: 3%; left: 3%; margin: 0 0 -12px -5px; padding: 0; position: absolute; }
 	.colors li, .line-thickness li { border: 1px solid #333; border-radius: 50%; cursor: pointer; display: inline-block; height: 16px; margin: 5px; width: 16px; }
