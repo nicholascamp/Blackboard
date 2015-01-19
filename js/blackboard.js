@@ -164,7 +164,8 @@ Blackboard.prototype = {
 	}
 };
 
-document.addEventListener('DOMContentLoaded',
+document.addEventListener(
+	'DOMContentLoaded',
 	Blackboard({
 		elm: document.getElementById('blackboard'),
 		board: {name: 'Black', color: '#000'},
