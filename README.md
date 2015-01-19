@@ -9,19 +9,19 @@ O Blackboard está no [Firefox Marketplace](https://marketplace.firefox.com/app/
 
 ## SUMÁRIO
 
-[Introdução](#user-content-introduÇÃo)
+[Introdução](#introduÇÃo)
 
-[Metodologia](#user-content-metodologia)
+[Metodologia](#metodologia)
 
-[1. Primeiros passos](#user-content-1-primeiros-passos)
+[1. Primeiros passos](#1-primeiros-passos)
 
-[2. Organização do ambiente](#user-content-2-organização-do-ambiente)
+[2. Organização do ambiente](#2-organização-do-ambiente)
 
-[3. Desenvolvendo o Blackboard](#user-content-3-desenvolvendo-o-blackboard)
+[3. Desenvolvendo o Blackboard](#3-desenvolvendo-o-blackboard)
 
-[Conclusão](#user-content-conclusÃo)
+[Conclusão](#conclusÃo)
 
-[Referências](#user-content-referÊncias)
+[Referências](#referÊncias)
 
 ## INTRODUÇÃO
 
