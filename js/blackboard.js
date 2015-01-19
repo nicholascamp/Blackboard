@@ -1,6 +1,6 @@
-var app = function (conf) {
+var Blackboard = function (conf) {
 	// Object to be returned
-	var instance = Object.create(app.prototype);
+	var instance = Object.create(Blackboard.prototype);
 
 	instance.board = conf.elm;
 		instance.board.width = window.innerWidth;
@@ -8,7 +8,6 @@ var app = function (conf) {
 		instance.board.name = conf.board.name || 'Black';
 		instance.board.color = conf.board.color || '#000';
 		instance.board.style.backgroundColor = instance.board.color;
-
 
 	instance.ctx = instance.board.getContext('2d');
 	instance.ongoingTouches = []; // touches in-progress
@@ -29,7 +28,7 @@ var app = function (conf) {
 	return instance;
 };
 
-app.prototype = {
+Blackboard.prototype = {
 	// The ongoingTouchIndexById() function scans through the ongoingTouches array to find the touch matching the given identifier, then returns that touch's index into the array.
 	ongoingTouchIndexById: function (idToFind) {
 		var i = 0;
@@ -165,11 +164,11 @@ app.prototype = {
 	}
 };
 
-var blackboard = {
-	elm: document.getElementById('blackboard'),
-	board: {name: 'Black', color: '#000'},
-	lineColor: '#fff', // default values
-	lineThickness: 4
-};
-
-document.addEventListener('DOMContentLoaded', app(blackboard));
+document.addEventListener('DOMContentLoaded',
+	Blackboard({
+		elm: document.getElementById('blackboard'),
+		board: {name: 'Black', color: '#000'},
+		lineColor: '#fff', // default values
+		lineThickness: 4
+	})
+);
