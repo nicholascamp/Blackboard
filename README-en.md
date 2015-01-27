@@ -2,6 +2,7 @@ Blackboard
 ==========
 
 Como criar um aplicativo, uma lousa, para o Firefox OS.
+How to create an application, a blackboard, to Firefox OS.
 
 ![Drawing with Blackboard](img/doc/thats-all.png "Drawing with Blackboard")
 
