@@ -5,13 +5,11 @@ Como criar um aplicativo, uma lousa, para o Firefox OS.
 
 ![Desenhando com o Blackboard](img/doc/thats-all.png "Desenhando com o Blackboard")
 
-O Blackboard está no [Firefox Marketplace](https://marketplace.firefox.com/app/paint-blackboard) e o código fonte [neste repositório do Github](https://github.com/nicholascamp/Blackboard). Este documento também está disponível em [.pdf](http://nicholascamp.com.br/blackboard/Blackboard.pdf).
+O Blackboard está no [Firefox Marketplace](https://marketplace.firefox.com/app/paint-blackboard) e o código fonte [neste repositório do Github](https://github.com/nicholascamp/Blackboard). Este documento também está disponível em [inglês](README-en.md) e em .pdf([português](http://nicholascamp.com.br/blackboard/Blackboard.pdf), [inglês](http://nicholascamp.com.br/blackboard/Blackboard-en.pdf)).
 
 ## SUMÁRIO
 
 [Introdução](#introduÇÃo)
-
-[Metodologia](#metodologia)
 
 [1. Primeiros passos](#1-primeiros-passos)
 
@@ -23,22 +21,13 @@ O Blackboard está no [Firefox Marketplace](https://marketplace.firefox.com/app/
 
 [Referências](#referÊncias)
 
-## INTRODUÇÃO
-
+## Introdução
 
 O Firefox OS é um novo Sistema Operacional desenvolvido pela Mozilla & sua comunidade de desenvolvedores para dispositivos móveis. É baseado no  navegador Mozilla Firefox e em tecnologias livres e abertas, como HTML, CSS, JavaScript e Linux.
 
 Ter o seu aplicativo em múltiplos sistemas operacionais costumava ser algo trabalhoso. Cada um deles possui sua linguagem – Java no Android, Objective C no iOS. Desta forma, para a criação de aplicativos nativos, era preciso pensar também em como portabilizar o código para as outras plataformas. O paradigma do Firefox OS mostra que a web é a plataforma, sendo assim, aplicativos devem ser instalados no dispositivo a partir dela mesma. São conhecidos como aplicativos da web aberta, open web apps.
 
 Este trabalho trata de explicar como cadastrar um aplicativo no Firefox Marketplace passo a passo, descrevendo todo o processo até esta etapa: desde os recursos utilizados (como um framework de front-end, biblioteca utilizada que facilita o início da codificação e fontes baixadas de “baús” de fontes) até os códigos escritos.
-
-## METODOLOGIA
-
-Este trabalho foi feito através do levantamento de diversos materiais e artigos disponíveis na internet a respeito do Firefox OS e da criação/conversão de aplicações em aplicativos. Artigos principalmente da Mozilla Developer Network (https://developer.mozilla.org/).
-
-Até o momento no qual foi escrito, haviam poucas informações e materiais na internet disponíveis para criação de um aplicativo, do início ao fim, para o Firefox OS, tal qual é o objetivo deste trabalho. Além disso, com a introdução da internet móvel em mercados emergentes com o Firefox OS, este documento, por explicar detalhadamente cada módulo do aplicativo, pode vir a ser o primeiro contato com o desenvolvimento de ideia/projeto/conteúdo/código com a web.
-
-Há disponível no Firefox Marketplace alguns milhares de aplicativos, quantidade ainda bastante pequena, se comparada ao milhão disponível nos Sistemas Operacionais Android e iOS. Este documento visa também a popularização do desenvolvimento da web e de aplicativos da web aberta.
 
 ## 1. Primeiros passos
 
@@ -50,7 +39,7 @@ Essas são as linguagens que precisa-se aprender a “falar” para desenvolver 
 
 ## 2. Organização do ambiente
 
-Como aplicativos para o Firefox OS são feitos utilizando HTML, CSS e JS, utiliza-se um modelo, um template, para basear a aplicação e evitar repetição de código a cada novo projeto. Como ainda não há um modelo específico para o Firefox OS, pode-se usar o HTML5 Boilerplate (http://www.html5boilerplate.com/). É a mesma base que muitos desenvolvedores front-end (aquele que mexe com HTML, CSS e JS – que trabalha a interface) utilizam para desenvolver sites.
+Como aplicativos para o Firefox OS são feitos utilizando HTML, CSS e JS, utiliza-se um modelo, um template, para basear a aplicação e evitar repetição de código a cada novo projeto. Como ainda não há um modelo específico para o Firefox OS, pode-se usar o [HTML5 Boilerplate](http://www.html5boilerplate.com/). É a mesma base que muitos desenvolvedores front-end (aquele que mexe com HTML, CSS e JS – que trabalha a interface) utilizam para desenvolver sites.
 
 Abrindo o modelo, vemos a seguinte estrutura:
 
@@ -314,13 +303,15 @@ Agora o JavaScript:
 		});
 	}
 
-![espessura](img/doc/espessura.png "espessura")
+![Funcionalidade de espessura da linha implementada](img/doc/espessura.png "Funcionalidade de espessura da linha implementada")
 
 Captura-se os elementos de aumentar e diminuir a espessura da linha e adiciona-se *EventListeners* de clique, que aumentam e diminuem o valor de `app.lineThickness`. Lembre-se de adicionar à `app.startup` a chamada à função, como em `colors()`.
 
 Pronto! Pode-se terminar por aqui. Mas pode-se ainda escrever o nome da Blackboard no canto esquerdo superior e, ao mudar a cor da linha, mudar o nome da cor em Blackboard, ou seja, mudando para branco, tem-se escrito Whiteboard. Assim tem-se uma representação da cor ativa da Blackboard.
 
 Para isso, precisamos adicionar o título Blackboard ao documento, buscar uma fonte adequada, embuti-la no CSS, alterar a função `colors()` e adicionar os nomes das cores à lista de cores.
+
+	<h1><span id="color-board">Black</span>board</h1>
 
 Adicionada a logo ao `body`. Nenhuma fonte padrão do sistema representou bem o Blackboard, então foi buscada uma em FontSquirrel: [HVD Comic Serif Pro](http://www.fontsquirrel.com/fonts/HVD-Comic-Serif-Pro). Baixar somente o formato woff, formato livre, que é usado pelo Firefox. Criar uma pasta chamada font na raiz do aplicativo e adicionar a fonte à ela.
 
