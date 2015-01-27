@@ -5,7 +5,7 @@ Como criar um aplicativo, uma lousa, para o Firefox OS.
 
 ![Desenhando com o Blackboard](img/doc/thats-all.png "Desenhando com o Blackboard")
 
-O Blackboard está no [Firefox Marketplace](https://marketplace.firefox.com/app/paint-blackboard) e o código fonte [neste repositório do Github](https://github.com/nicholascamp/Blackboard). Este documento também está disponível em [inglês](README-en.md) e em .pdf([português](http://nicholascamp.com.br/blackboard/Blackboard.pdf), [inglês](http://nicholascamp.com.br/blackboard/Blackboard-en.pdf)).
+O Blackboard está no [Firefox Marketplace](https://marketplace.firefox.com/app/paint-blackboard) e o código fonte [neste repositório do Github](https://github.com/nicholascamp/Blackboard). Este documento também está disponível em [inglês](README-en.md), em .pdf([português](http://nicholascamp.com.br/blackboard/Blackboard.pdf), [inglês](http://nicholascamp.com.br/blackboard/Blackboard-en.pdf)) e no [navegador](http://nicholascamp.com.br/blackboard/). Para usar o Blackboard no navegador, habilite o modo responsivo do Firefox (CTRL + SHIFT + M ou equivalente em outro navegador) e clique no botão de simular toques.
 
 ## SUMÁRIO
 

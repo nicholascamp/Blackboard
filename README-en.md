@@ -6,7 +6,7 @@ How to create an application, a blackboard, to Firefox OS.
 
 ![Drawing with Blackboard](img/doc/thats-all.png "Drawing with Blackboard")
 
-Blackboard is in [Firefox Marketplace](https://marketplace.firefox.com/app/paint-blackboard) and the source code [in this repository in GitHub](https://github.com/nicholascamp/Blackboard). This document is available too in [portuguese](README.md) and in .pdf([english](http://nicholascamp.com.br/blackboard/Blackboard-en.pdf), [portuguese](http://nicholascamp.com.br/blackboard/Blackboard.pdf)).
+Blackboard is in [Firefox Marketplace](https://marketplace.firefox.com/app/paint-blackboard) and the source code [in this repository in GitHub](https://github.com/nicholascamp/Blackboard). This document is available too in [portuguese](README.md), in .pdf([english](http://nicholascamp.com.br/blackboard/Blackboard-en.pdf), [portuguese](http://nicholascamp.com.br/blackboard/Blackboard.pdf)) and in the [browser](http://nicholascamp.com.br/blackboard/). To use Blackboard in the browser, enable the responsive mode in Firefox (CTRL + SHIFT + M or equivalent in another browser) and click in simulate touches button.
 
 ## SUMMARY
 
